@@ -5,5 +5,5 @@ function Footer() {
     <p>Designed and Developed by Matheus Carvalho</p>
   );
 }
-
+// 
 export default Footer;
