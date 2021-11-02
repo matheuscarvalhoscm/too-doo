@@ -1,12 +1,15 @@
 import './App.css';
+import TooDooProvider from './context/TooDooProvider';
 import MainPage from '../src/pages/MainPage';
 
 function App() {
   document.title = 'Too Doo';
   return (
-    <div>
-      <MainPage />
-    </div>
+    <TooDooProvider>
+      <div>
+        <MainPage />
+      </div>
+    </TooDooProvider>
   );
 }
 
