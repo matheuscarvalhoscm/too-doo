@@ -10,7 +10,7 @@ function TaskList() {
         <ul>
           {taskList.map((task) => (
             <div className="task">
-              <li>{task}</li>
+              <li>{ task }</li>
               <TaskListButtons />
             </div>
           ))}
