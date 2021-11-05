@@ -7,16 +7,14 @@ function TaskList() {
 
   if (taskList !== [] || taskList !== undefined)
     return (
-      <div>
         <ul>
           {taskList.map((task) => (
-            <div>
+            <div className="task">
               <li>{task}</li>
               <TaskListButtons />
             </div>
           ))}
         </ul>
-      </div>
     );
 }
 // 
