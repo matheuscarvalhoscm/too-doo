@@ -3,7 +3,7 @@ import TooDooContext from "../context/TooDooContext";
 import AddTaskButton from "./AddTaskButton";
 
 function Input() {
-  const { setInputText } = useContext(TooDooContext);
+  const { inputText, setInputText } = useContext(TooDooContext);
 
   function handleChange({ target }) {
     const { value } = target;
@@ -15,6 +15,7 @@ function Input() {
       <input
         type="text"
         placeholder="Write your tasks"
+        value={ inputText }
         onChange={handleChange}
       />
       <AddTaskButton />
