@@ -17,14 +17,17 @@ ul {
 }
 
 .concluded-button {
-  background-color: #35a700;
+  background-color: #fff;
+  border: 2px solid #35a700;
 }
 
 .edit-button {
+  border: 2px solid #da9e03;
   background-color: #da9e03;
 }
 
 .delete-button {
+  border: 2px solid #da0303;
   background-color: #da0303;
 }
 
@@ -32,4 +35,8 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.task-buttons {
+  margin-right: 10%;
 }

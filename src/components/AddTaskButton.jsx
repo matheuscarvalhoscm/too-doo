@@ -10,7 +10,7 @@ function AddTaskButton() {
     setInputText('');
   }
   return(
-    <button type="button" onClick={ handleClick}> Add task </button>
+    <button type="button" onClick={ handleClick }> Add task </button>
   );
 }
 // 
