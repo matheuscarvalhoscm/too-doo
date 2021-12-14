@@ -5,17 +5,18 @@ import TaskListButtons from "./TaskListButtons";
 function TaskList() {
   const { taskList } = useContext(TooDooContext);
 
-  if (taskList !== [] || taskList !== undefined)
+  if (taskList !== [] || taskList !== undefined) {
     return (
-        <ul>
-          {taskList.map((task) => (
-            <div className="task">
-              <li>{ task }</li>
-              <TaskListButtons />
-            </div>
-          ))}
-        </ul>
+      <ul>
+        {taskList.map((task, index) => (
+          <div className="task" key={ index }>
+            <li>{ task }</li>
+            <TaskListButtons />
+          </div>
+        ))}
+      </ul>
     );
+  }
 }
-// 
+//
 export default TaskList;

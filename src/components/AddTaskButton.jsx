@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import TooDooContext from '../context/TooDooContext';
 
 function AddTaskButton() {
@@ -9,6 +9,12 @@ function AddTaskButton() {
     setTaskList(tasks);
     setInputText('');
   }
+
+  useEffect(() => {
+    localStorage.setItem('list', JSON.stringify(taskList));
+  }, [taskList]);
+
+  
   return(
     <button type="button" onClick={ handleClick }> Add task </button>
   );
