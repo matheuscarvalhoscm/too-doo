@@ -3,6 +3,16 @@ button {
   padding: 5px;
 }
 
+footer {
+  bottom: 0;
+  color: gray;
+  font-size: 12px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
 ul {
   display: flex;
   flex-direction: column;
