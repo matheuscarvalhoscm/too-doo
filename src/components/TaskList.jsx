@@ -8,10 +8,10 @@ function TaskList() {
   if (taskList !== [] || taskList !== undefined) {
     return (
       <ul>
-        {taskList.map((task, index) => (
+        {taskList.map(({ id, task }, index) => (
           <div className="task" key={ index }>
             <li>{ task }</li>
-            <TaskListButtons />
+            <TaskListButtons id={ id } />
           </div>
         ))}
       </ul>

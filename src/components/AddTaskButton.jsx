@@ -6,7 +6,12 @@ function AddTaskButton() {
 
   function handleClick() {
     if (!inputText) return alert('Can not add an empty task');
-    const tasks = [...taskList, inputText];
+    const newTask = {
+      id: taskList.length + 1,
+      task: inputText,
+      completed: false,   
+    }
+    const tasks = [...taskList, newTask];
     setTaskList(tasks);
     setInputText('');
   }
