@@ -16,7 +16,7 @@ function Input() {
         type="text"
         placeholder="Write your tasks"
         value={ inputText }
-        onChange={handleChange}
+        onChange={ handleChange }
       />
       <AddTaskButton />
     </div>
