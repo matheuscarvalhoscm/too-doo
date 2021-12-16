@@ -5,6 +5,7 @@ function AddTaskButton() {
   const { inputText, setInputText, taskList, setTaskList } = useContext(TooDooContext);
 
   function handleClick() {
+    if (!inputText) return alert('Can not add an empty task');
     const tasks = [...taskList, inputText];
     setTaskList(tasks);
     setInputText('');
