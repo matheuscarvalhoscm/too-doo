@@ -3,7 +3,12 @@ import TooDooContext from "../context/TooDooContext";
 import TaskListButtons from "./TaskListButtons";
 
 function TaskList() {
-  const { taskList } = useContext(TooDooContext);
+  const { taskList, editingInput, setEditingInput } = useContext(TooDooContext);
+
+  const handleEditingText = ({ target }) => {
+    const { value } = target;
+    setEditingInput(value);
+  }
 
   if (taskList !== [] || taskList !== undefined) {
     return (
@@ -12,7 +17,7 @@ function TaskList() {
           <div className="task" key={ index }>
             { !isEditing 
               ? <li>{ task }</li> 
-              : <input type="text" value={ task } />}
+              : <input type="text" value={ editingInput } onChange={ (e) => handleEditingText(e) } />}
             <TaskListButtons id={ id } isEditing={ isEditing } />
           </div>
         ))}

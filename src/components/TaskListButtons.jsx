@@ -2,7 +2,7 @@ import React,{ useContext } from 'react';
 import TooDooContext from '../context/TooDooContext'
 
 function TaskListButtons({ id, isEditing }) {
-  const { taskList, setTaskList } = useContext(TooDooContext);
+  const { taskList, setTaskList, editingInput, setEditingInput } = useContext(TooDooContext);
 
   const handleCompleted = (id, { target }) => {
     const { checked } = target;
@@ -21,6 +21,8 @@ function TaskListButtons({ id, isEditing }) {
     const taskToEdit = taskList.find((task) => task.id === id);
     const index = taskList.indexOf(taskToEdit);
     taskList[index].isEditing = !isEditing;
+    setEditingInput(taskToEdit.task);
+    taskList[index].task = editingInput;
     setTaskList([...taskList]);
   };
   
