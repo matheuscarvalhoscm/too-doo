@@ -10,6 +10,9 @@ function TooDooProvider({ children }) {
   });
   const [inputText, setInputText] = useState('');
   const [editingInput, setEditingInput] = useState('');
+  const [filters, setFilters] = useState({
+    filter: 'allTasks',
+  });
 
   const contextValue = {
     taskList,
@@ -18,6 +21,8 @@ function TooDooProvider({ children }) {
     setInputText,
     editingInput,
     setEditingInput,
+    filters,
+    setFilters,
   }
 
   return(

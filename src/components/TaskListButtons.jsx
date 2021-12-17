@@ -1,7 +1,7 @@
 import React,{ useContext } from 'react';
 import TooDooContext from '../context/TooDooContext'
 
-function TaskListButtons({ id, isEditing }) {
+function TaskListButtons({ id, isEditing, completed }) {
   const { taskList, setTaskList, editingInput, setEditingInput } = useContext(TooDooContext);
 
   const handleCompleted = (id, { target }) => {
@@ -32,7 +32,10 @@ function TaskListButtons({ id, isEditing }) {
       <input
         className="concluded-button"
         type="checkbox"
+        checked={ completed }
         onClick={ (e) => handleCompleted(id, e) }
+        onChange={() => {}}
+        // ref to the expected onChange warning: https://stackoverflow.com/questions/36715901/reactjs-error-warning/36716016
       />
       <button
         className="edit-button"
