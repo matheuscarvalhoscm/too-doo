@@ -3,18 +3,21 @@ import PropTypes from 'prop-types';
 import TooDooContext from './TooDooContext';
 
 function TooDooProvider({ children }) {
-  const [ taskList, setTaskList ] = useState(() => {
+  const [taskList, setTaskList] = useState(() => {
     const getFromLocalStorage = localStorage.getItem('list');
     const listFromLocalStorage = JSON.parse(getFromLocalStorage);
     return listFromLocalStorage || [];
   });
-  const [ inputText, setInputText ] = useState('');
+  const [inputText, setInputText] = useState('');
+  const [editingInput, setEditingInput] = useState('');
 
   const contextValue = {
     taskList,
     setTaskList,
     inputText,
-    setInputText
+    setInputText,
+    editingInput,
+    setEditingInput,
   }
 
   return(
