@@ -20,10 +20,11 @@ function TaskListButtons({ id, isEditing }) {
   const handleEdit = (id) => {
     const taskToEdit = taskList.find((task) => task.id === id);
     const index = taskList.indexOf(taskToEdit);
-    taskList[index].isEditing = !isEditing;
     setEditingInput(taskToEdit.task);
     taskList[index].task = editingInput;
     setTaskList([...taskList]);
+    if (isEditing && !editingInput) return alert('Please write something');
+    taskList[index].isEditing = !isEditing;
   };
   
   return(
