@@ -10,6 +10,7 @@ function AddTaskButton() {
       id: taskList.length + 1,
       task: inputText,
       completed: false,   
+      isEditing: false, 
     }
     const tasks = [...taskList, newTask];
     setTaskList(tasks);
