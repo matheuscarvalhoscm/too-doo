@@ -18,7 +18,7 @@ function TaskList() {
 
   if (taskList !== [] || taskList !== undefined) {
     return (
-      <ul>
+      <ul id="task-list-container">
         { taskList
             .filter((task) => {
               if (filter === 'completed') {
@@ -31,9 +31,9 @@ function TaskList() {
               return filter
             })
             .map(({ id, task, isEditing, completed }, index) => (
-          <div className="task" key={ index }>
+          <div className="task-container" key={ index }>
             { !isEditing ? (
-              <li>{ task }</li>
+              <li className="task">{ task }</li>
             ) : (
               <input
                 type="text"
