@@ -1,4 +1,6 @@
 import React,{ useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
 import TooDooContext from '../context/TooDooContext'
 
 function TaskListButtons({ id, isEditing, completed }) {
@@ -30,7 +32,8 @@ function TaskListButtons({ id, isEditing, completed }) {
   return(
     <div className="task-buttons">
       <input
-        className="concluded-button"
+        id="conclued-input"
+        className="concluded-input"
         type="checkbox"
         checked={ completed }
         onClick={ (e) => handleCompleted(id, e) }
@@ -41,12 +44,16 @@ function TaskListButtons({ id, isEditing, completed }) {
         className="edit-button"
         type="button"
         onClick={ () => handleEdit(id) }
-      />
+      >
+        <FontAwesomeIcon icon={ faEdit } />
+      </button>
       <button
         className="delete-button"
         type="button"
         onClick={ () => handleDelete(id) } 
-      />
+      >
+        <FontAwesomeIcon icon={ faTrash } />
+      </button>
     </div>
   );
 }

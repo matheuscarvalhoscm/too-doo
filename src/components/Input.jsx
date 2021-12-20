@@ -11,8 +11,9 @@ function Input() {
   }
 
   return (
-    <div>
+    <div id="add-task">
       <input
+        id="task-input"
         type="text"
         placeholder="Write your tasks"
         value={ inputText }
