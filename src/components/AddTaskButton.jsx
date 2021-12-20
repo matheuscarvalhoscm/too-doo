@@ -23,7 +23,7 @@ function AddTaskButton() {
 
   
   return(
-    <button type="button" onClick={ handleClick }> Add task </button>
+    <button id="add-task-btn" type="button" onClick={ handleClick }> + </button>
   );
 }
 // 

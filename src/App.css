@@ -1,4 +1,63 @@
-button {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --greyBG: #D2D1D1;
+  --green: #35A700;
+  --yellow: #DA9E03;
+  --red: #DA0303;
+  --white: #FFF;
+}
+
+* {
+  margin: 0;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  margin: 5vh;
+  text-align: center;
+}
+
+#add-task {
+  display: flex;
+  align-items: center;
+}
+
+#task-input {
+  background-color: var(--greyBG);
+  border-radius: 5px;
+  border-style: none;
+  margin-left: 3vh;
+  height: 34px;
+  text-indent: 10px;
+  width: 250px;
+}
+
+::placeholder {
+  color: var(--white);
+  padding: 10px;
+}
+
+#add-task-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--greyBG);
+  border-style: none;
+  border-radius: 50%;
+  color: var(--white);
+  height: 40px;
+  margin-left: 2vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 10px;
+  width: 40px;
+}
+
+/* button {
   border: 0px;
   padding: 5px;
   margin: 5px;
@@ -58,4 +117,4 @@ input {
 
 .task-buttons {
   margin-right: 10%;
-}
+} */
