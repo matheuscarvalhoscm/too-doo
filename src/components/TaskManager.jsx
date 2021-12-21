@@ -13,20 +13,23 @@ function TaskManager() {
   };
 
   return(
-    <div>
+    <div id="task-manager">
       <button
+        id="all-tasks-filter"
         type="button"
         name="allTasks"
         onClick={ (e) => handleFilters(e) }>
           All Tasks
         </button>
       <button
+        id="in-progress-filter"
         type="button"
         name="inProgress"
         onClick={ (e) => handleFilters(e) }>
           In Progress
         </button>
       <button
+        id="completed-filter"
         type="button"
         name="completed"
         onClick={ (e) => handleFilters(e) }>
