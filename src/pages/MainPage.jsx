@@ -8,8 +8,10 @@ function MainPage() {
   return (
     <div>
       <h1 className="title">Too Doo</h1>
-      <Input />
-      <TaskList />
+      <div id="task-list-main-container">
+        <Input />
+        <TaskList />
+      </div>
       <TaskManager />
       <Footer />
     </div>

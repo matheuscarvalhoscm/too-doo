@@ -30,7 +30,6 @@
   background-color: var(--greyBG);
   border-radius: 5px;
   border-style: none;
-  margin-left: 3vh;
   height: 34px;
   text-indent: 10px;
   width: 250px;
@@ -65,13 +64,21 @@
 
 #task-list-container {
   margin: 20px 0px;
+  width: 80%;
+  padding: 0px;
+}
+
+#task-list-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .task-container {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  /* width: 100%; */
 }
 
 .task {
