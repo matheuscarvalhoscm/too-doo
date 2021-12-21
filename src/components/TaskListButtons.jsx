@@ -32,7 +32,6 @@ function TaskListButtons({ id, isEditing, completed }) {
   return(
     <div className="task-buttons">
       <input
-        id="conclued-input"
         className="concluded-input"
         type="checkbox"
         checked={ completed }

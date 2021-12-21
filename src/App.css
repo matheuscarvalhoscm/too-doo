@@ -9,6 +9,7 @@
   --green: #35A700;
   --yellow: #DA9E03;
   --red: #DA0303;
+  --blue: #006BA7;
   --white: #FFF;
 }
 
@@ -37,6 +38,9 @@
 
 ::placeholder {
   color: var(--white);
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
   padding: 10px;
 }
 
@@ -71,6 +75,7 @@
 .task {
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
+  align-self: center;
 }
 
 .task-buttons {
@@ -101,64 +106,51 @@
   width: 20px;
 }
 
-/* button {
-  border: 0px;
-  padding: 5px;
-  margin: 5px;
-}
-
-footer {
-  bottom: 0;
-  color: gray;
-  font-size: 12px;
-  left: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-}
-
-ul {
+#task-manager {
   display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  list-style: none;
+  justify-content: center;
 }
 
-input {
-  background-color: rgb(231, 231, 231);
-  border: none;
-  border-radius: 10px;
-  margin: 5px;
+#all-tasks-filter, #in-progress-filter, #completed-filter {
+  border-radius: 5px;
+  margin: 10px;
   padding: 10px;
+  border-style: none;
+  transition: 0.5s;
 }
 
-.concluded-button, .edit-button, .delete-button {
-  border-radius: 50%;
-  margin: 5px;
-  padding: 8px;
+#all-tasks-filter {
+  background-color: var(--white);
+  border: 2px solid var(--blue);
+  color: var(--blue);
 }
 
-.concluded-button {
-  background-color: #fff;
-  border: 2px solid #35a700;
+#all-tasks-filter:hover {
+  background-color: var(--blue);
+  color: var(--white);
+  transition: 0.5s;
 }
 
-.edit-button {
-  border: 2px solid #da9e03;
-  background-color: #da9e03;
+#in-progress-filter {
+  background-color: var(--white);
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
 }
 
-.delete-button {
-  border: 2px solid #da0303;
-  background-color: #da0303;
+#in-progress-filter:hover {
+  background-color: var(--yellow);
+  color: var(--white);
+  transition: 0.5s;
 }
 
-.task {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+#completed-filter {
+  background-color: var(--white);
+  border: 2px solid var(--green);
+  color: var(--green);
 }
 
-.task-buttons {
-  margin-right: 10%;
-} */
+#completed-filter:hover {
+  background-color: var(--green);
+  color: var(--white);
+  transition: 0.5s;
+}
