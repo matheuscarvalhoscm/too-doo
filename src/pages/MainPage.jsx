@@ -7,7 +7,7 @@ import TaskManager from "../components/TaskManager";
 function MainPage() {
   return (
     <div>
-      <h1 className="title">Too Doo</h1>
+      <h1 className="title">Too Doo!</h1>
       <div id="task-list-main-container">
         <Input />
         <TaskList />
