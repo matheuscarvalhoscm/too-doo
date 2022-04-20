@@ -1,4 +1,15 @@
-on:  [push, pull_request]
+# .github/workflows/preview.yml
+name: Deploy PR previews
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+concurrency: preview-${{ github.ref }}
 
 jobs:
   deploy-preview:
@@ -11,6 +22,7 @@ jobs:
         run: |
           npm install
           npm run build
+
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
